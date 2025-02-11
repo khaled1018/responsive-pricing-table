@@ -4,18 +4,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   background-color: #f8f9fa;
 }
 
-/* Container for both price cards */
-.pricing-container {
+.card-container {
   display: flex;
-  flex-wrap: nowrap; /* Default: No wrap */
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
-  max-width: 900px;
-  width: 100%;
+  width: 71%;
   padding: 20px;
 }
 
@@ -28,7 +26,7 @@ h4 {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   min-height: 27vh;
-  flex: 1;
+  width: 50%;
   max-width: 300px;
 }
 
@@ -73,14 +71,17 @@ ul {
   margin-top: 2rem;
 }
 
-/* Media Query: Wrap cards if the screen is less than 330px */
+i {
+  color: green;
+}
+
 @media (max-width: 579px) {
-  .pricing-container {
-    flex-wrap: wrap; /* Allows wrapping */
+  .card-container {
+    flex-direction: column;
   }
 
   .price-card {
-    width: 100%; /* Full width for small screens */
+    width: 100%;
     max-width: 100%;
   }
 }
