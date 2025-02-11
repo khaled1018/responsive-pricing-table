@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Container for both price cards */
+.pricing-container {
+  display: flex;
+  flex-wrap: nowrap; /* Default: No wrap */
+  justify-content: center;
+  gap: 1rem;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.price-card {
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  min-height: 27vh;
+  flex: 1;
+  max-width: 300px;
+}
+
+.free-plan {
+  background-color: rgb(241, 233, 233);
+  color: #222;
+}
+
+.pro-plan {
+  background-color: #222;
+  color: rgb(241, 233, 233);
+}
+
+p.plan-for-whome {
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.price-card button {
+  border-radius: 11px;
+  border: none;
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.free-plan button {
+  background-color: #222;
+  color: rgb(241, 233, 233);
+}
+
+.pro-plan button {
+  background-color: rgb(241, 233, 233);
+  color: #222;
+}
+
+ul {
+  list-style: none;
+  line-height: 243%;
+  padding-left: 0.8rem;
+  margin-top: 2rem;
+}
+
+/* Media Query: Wrap cards if the screen is less than 330px */
+@media (max-width: 579px) {
+  .pricing-container {
+    flex-wrap: wrap; /* Allows wrapping */
+  }
+
+  .price-card {
+    width: 100%; /* Full width for small screens */
+    max-width: 100%;
+  }
+}
